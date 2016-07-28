@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		68D4752F1D4A829E00D65851 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4752E1D4A829E00D65851 /* AppDelegate.swift */; };
+		68D475311D4A829E00D65851 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475301D4A829E00D65851 /* ViewController.swift */; };
+		68D475341D4A829E00D65851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D475321D4A829E00D65851 /* Main.storyboard */; };
+		68D475361D4A829E00D65851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D475351D4A829E00D65851 /* Assets.xcassets */; };
+		68D475391D4A829E00D65851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D475371D4A829E00D65851 /* LaunchScreen.storyboard */; };
+		B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		15ED9942FE158A97FDD0729E /* Pods-GeoStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68D4752B1D4A829E00D65851 /* GeoStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		68D4752E1D4A829E00D65851 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		68D475301D4A829E00D65851 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		68D475331D4A829E00D65851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68D475351D4A829E00D65851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		68D475381D4A829E00D65851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		68D4753A1D4A829E00D65851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		68D475281D4A829E00D65851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E6BB12A49FF3C8EA4BB1E1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FB78B269100B0E7D308F51E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15ED9942FE158A97FDD0729E /* Pods-GeoStatus.debug.xcconfig */,
+				7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68D475221D4A829E00D65851 = {
+			isa = PBXGroup;
+			children = (
+				68D4752D1D4A829E00D65851 /* GeoStatus */,
+				68D4752C1D4A829E00D65851 /* Products */,
+				5FB78B269100B0E7D308F51E /* Pods */,
+				3E6BB12A49FF3C8EA4BB1E1C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		68D4752C1D4A829E00D65851 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68D4752B1D4A829E00D65851 /* GeoStatus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68D4752D1D4A829E00D65851 /* GeoStatus */ = {
+			isa = PBXGroup;
+			children = (
+				68D4752E1D4A829E00D65851 /* AppDelegate.swift */,
+				68D475301D4A829E00D65851 /* ViewController.swift */,
+				68D475321D4A829E00D65851 /* Main.storyboard */,
+				68D475351D4A829E00D65851 /* Assets.xcassets */,
+				68D475371D4A829E00D65851 /* LaunchScreen.storyboard */,
+				68D4753A1D4A829E00D65851 /* Info.plist */,
+			);
+			path = GeoStatus;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		68D4752A1D4A829E00D65851 /* GeoStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68D4753D1D4A829E00D65851 /* Build configuration list for PBXNativeTarget "GeoStatus" */;
+			buildPhases = (
+				A0A1DB44D73A9B1912915F19 /* [CP] Check Pods Manifest.lock */,
+				68D475271D4A829E00D65851 /* Sources */,
+				68D475281D4A829E00D65851 /* Frameworks */,
+				68D475291D4A829E00D65851 /* Resources */,
+				BA1F7665F5270E27C7EDD61C /* [CP] Embed Pods Frameworks */,
+				424617406EE4B37E77A6A061 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoStatus;
+			productName = GeoStatus;
+			productReference = 68D4752B1D4A829E00D65851 /* GeoStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		68D475231D4A829E00D65851 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mobile Data Labs";
+				TargetAttributes = {
+					68D4752A1D4A829E00D65851 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 68D475261D4A829E00D65851 /* Build configuration list for PBXProject "GeoStatus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 68D475221D4A829E00D65851;
+			productRefGroup = 68D4752C1D4A829E00D65851 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				68D4752A1D4A829E00D65851 /* GeoStatus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		68D475291D4A829E00D65851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68D475391D4A829E00D65851 /* LaunchScreen.storyboard in Resources */,
+				68D475361D4A829E00D65851 /* Assets.xcassets in Resources */,
+				68D475341D4A829E00D65851 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		424617406EE4B37E77A6A061 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0A1DB44D73A9B1912915F19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1F7665F5270E27C7EDD61C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68D475271D4A829E00D65851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68D475311D4A829E00D65851 /* ViewController.swift in Sources */,
+				68D4752F1D4A829E00D65851 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		68D475321D4A829E00D65851 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68D475331D4A829E00D65851 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		68D475371D4A829E00D65851 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				68D475381D4A829E00D65851 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		68D4753B1D4A829E00D65851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		68D4753C1D4A829E00D65851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68D4753E1D4A829E00D65851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15ED9942FE158A97FDD0729E /* Pods-GeoStatus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledatalabs.GeoStatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		68D4753F1D4A829E00D65851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledatalabs.GeoStatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		68D475261D4A829E00D65851 /* Build configuration list for PBXProject "GeoStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68D4753B1D4A829E00D65851 /* Debug */,
+				68D4753C1D4A829E00D65851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68D4753D1D4A829E00D65851 /* Build configuration list for PBXNativeTarget "GeoStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68D4753E1D4A829E00D65851 /* Debug */,
+				68D4753F1D4A829E00D65851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 68D475231D4A829E00D65851 /* Project object */;
+}
