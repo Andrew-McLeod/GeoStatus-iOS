@@ -7,5 +7,6 @@ target 'GeoStatus' do
 
   # Pods for GeoStatus
   pod 'Alamofire'
+  pod 'RealmSwift'
 
 end
