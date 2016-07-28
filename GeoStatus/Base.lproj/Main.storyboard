@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeoStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZm-6I-cz1" userLabel="Notification Permissions">
+                                <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification permissions needed..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4h-1S-COR">
+                                        <rect key="frame" x="8" y="13" width="261" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYx-A5-DWI">
+                                        <rect key="frame" x="543" y="9" width="49" height="30"/>
+                                        <state key="normal" title="Accept">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promptForNotificationPermissions" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ox6-Gx-4rA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CYx-A5-DWI" secondAttribute="trailing" constant="8" id="3GG-Ga-ihq"/>
+                                    <constraint firstAttribute="height" constant="48" id="Hil-om-qXe"/>
+                                    <constraint firstItem="y4h-1S-COR" firstAttribute="leading" secondItem="rZm-6I-cz1" secondAttribute="leading" constant="8" id="VQF-Hh-L0O"/>
+                                    <constraint firstItem="y4h-1S-COR" firstAttribute="centerY" secondItem="rZm-6I-cz1" secondAttribute="centerY" id="f7B-SR-nUa"/>
+                                    <constraint firstItem="CYx-A5-DWI" firstAttribute="centerY" secondItem="rZm-6I-cz1" secondAttribute="centerY" id="jCq-Oh-b52"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWY-wh-gXV" userLabel="Location Permissions">
+                                <rect key="frame" x="0.0" y="552" width="600" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-W5-s9T">
+                                        <rect key="frame" x="543" y="9" width="49" height="30"/>
+                                        <state key="normal" title="Accept">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promptForLocationPermissions" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Nn-Ef-nDb"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location permissions needed..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pat-vj-qr4">
+                                        <rect key="frame" x="8" y="13" width="238" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Pat-vj-qr4" firstAttribute="centerY" secondItem="xWY-wh-gXV" secondAttribute="centerY" id="HCK-bO-RAV"/>
+                                    <constraint firstAttribute="height" constant="48" id="aK1-Bw-XOc"/>
+                                    <constraint firstItem="vvK-W5-s9T" firstAttribute="centerY" secondItem="xWY-wh-gXV" secondAttribute="centerY" id="fDZ-wt-MA8"/>
+                                    <constraint firstItem="Pat-vj-qr4" firstAttribute="leading" secondItem="xWY-wh-gXV" secondAttribute="leading" constant="8" id="pkj-7i-PdY"/>
+                                    <constraint firstAttribute="trailing" secondItem="vvK-W5-s9T" secondAttribute="trailing" constant="8" id="zjx-a6-j3a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rZm-6I-cz1" secondAttribute="bottom" id="5Js-wU-d3S"/>
+                            <constraint firstItem="rZm-6I-cz1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="63J-JD-m4C"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xWY-wh-gXV" secondAttribute="bottom" id="CcY-oR-GSX"/>
+                            <constraint firstItem="xWY-wh-gXV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MG9-3h-at2"/>
+                            <constraint firstAttribute="trailing" secondItem="xWY-wh-gXV" secondAttribute="trailing" id="Xq1-eQ-HvW"/>
+                            <constraint firstAttribute="trailing" secondItem="rZm-6I-cz1" secondAttribute="trailing" id="kBH-Mh-FGc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="locationPermissionBar" destination="xWY-wh-gXV" id="dg6-ry-6Y3"/>
+                        <outlet property="notificationPermissionBar" destination="rZm-6I-cz1" id="SZq-mF-gMW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="611" y="500"/>
         </scene>
     </scenes>
 </document>

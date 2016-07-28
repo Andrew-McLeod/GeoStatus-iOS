@@ -12,6 +12,7 @@
 		68D475341D4A829E00D65851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D475321D4A829E00D65851 /* Main.storyboard */; };
 		68D475361D4A829E00D65851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D475351D4A829E00D65851 /* Assets.xcassets */; };
 		68D475391D4A829E00D65851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D475371D4A829E00D65851 /* LaunchScreen.storyboard */; };
+		68D475411D4A83FC00D65851 /* GeoLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475401D4A83FC00D65851 /* GeoLocationManager.swift */; };
 		B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		68D475351D4A829E00D65851 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68D475381D4A829E00D65851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68D4753A1D4A829E00D65851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68D475401D4A83FC00D65851 /* GeoLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationManager.swift; sourceTree = "<group>"; };
 		7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 				68D475351D4A829E00D65851 /* Assets.xcassets */,
 				68D475371D4A829E00D65851 /* LaunchScreen.storyboard */,
 				68D4753A1D4A829E00D65851 /* Info.plist */,
+				68D475401D4A83FC00D65851 /* GeoLocationManager.swift */,
 			);
 			path = GeoStatus;
 			sourceTree = "<group>";
@@ -123,6 +126,12 @@
 				TargetAttributes = {
 					68D4752A1D4A829E00D65851 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9833T9S95L;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -211,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68D475311D4A829E00D65851 /* ViewController.swift in Sources */,
+				68D475411D4A83FC00D65851 /* GeoLocationManager.swift in Sources */,
 				68D4752F1D4A829E00D65851 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,7 +335,9 @@
 			baseConfigurationReference = 15ED9942FE158A97FDD0729E /* Pods-GeoStatus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GeoStatus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledatalabs.GeoStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -337,7 +349,9 @@
 			baseConfigurationReference = 7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GeoStatus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobiledatalabs.GeoStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
