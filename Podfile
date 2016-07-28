@@ -6,5 +6,6 @@ target 'GeoStatus' do
   use_frameworks!
 
   # Pods for GeoStatus
+  pod 'Alamofire'
 
 end
