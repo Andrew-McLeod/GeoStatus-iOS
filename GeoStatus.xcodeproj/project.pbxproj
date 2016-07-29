@@ -20,8 +20,9 @@
 		68D4754E1D4B1C9900D65851 /* GeoRegionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */; };
 		72FA496A1D4BCEF20056BED0 /* home.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA49681D4BCEF20056BED0 /* home.gpx */; };
 		72FA496B1D4BCEF20056BED0 /* work.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA49691D4BCEF20056BED0 /* work.gpx */; };
-		72FA496D1D4BD03C0056BED0 /* ocean-beach.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA496C1D4BD03C0056BED0 /* ocean-beach.gpx */; };
 		72FA496F1D4BD1270056BED0 /* little-griddle.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA496E1D4BD1270056BED0 /* little-griddle.gpx */; };
+		72FA49711D4BD2F00056BED0 /* dutch-windmill.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA49701D4BD2F00056BED0 /* dutch-windmill.gpx */; };
+		72FA49731D4BD3AA0056BED0 /* swimming@ocean-beach.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA49721D4BD3AA0056BED0 /* swimming@ocean-beach.gpx */; };
 		B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,8 +44,9 @@
 		68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegionStore.swift; sourceTree = "<group>"; };
 		72FA49681D4BCEF20056BED0 /* home.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home.gpx; sourceTree = "<group>"; };
 		72FA49691D4BCEF20056BED0 /* work.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = work.gpx; sourceTree = "<group>"; };
-		72FA496C1D4BD03C0056BED0 /* ocean-beach.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ocean-beach.gpx"; sourceTree = "<group>"; };
 		72FA496E1D4BD1270056BED0 /* little-griddle.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "little-griddle.gpx"; sourceTree = "<group>"; };
+		72FA49701D4BD2F00056BED0 /* dutch-windmill.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "dutch-windmill.gpx"; sourceTree = "<group>"; };
+		72FA49721D4BD3AA0056BED0 /* swimming@ocean-beach.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "swimming@ocean-beach.gpx"; sourceTree = "<group>"; };
 		7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +121,9 @@
 		72FA49671D4BCEF20056BED0 /* locations */ = {
 			isa = PBXGroup;
 			children = (
+				72FA49721D4BD3AA0056BED0 /* swimming@ocean-beach.gpx */,
+				72FA49701D4BD2F00056BED0 /* dutch-windmill.gpx */,
 				72FA496E1D4BD1270056BED0 /* little-griddle.gpx */,
-				72FA496C1D4BD03C0056BED0 /* ocean-beach.gpx */,
 				72FA49681D4BCEF20056BED0 /* home.gpx */,
 				72FA49691D4BCEF20056BED0 /* work.gpx */,
 			);
@@ -198,8 +201,9 @@
 				72FA496B1D4BCEF20056BED0 /* work.gpx in Resources */,
 				68D475361D4A829E00D65851 /* Assets.xcassets in Resources */,
 				72FA496A1D4BCEF20056BED0 /* home.gpx in Resources */,
-				72FA496D1D4BD03C0056BED0 /* ocean-beach.gpx in Resources */,
+				72FA49711D4BD2F00056BED0 /* dutch-windmill.gpx in Resources */,
 				68D475341D4A829E00D65851 /* Main.storyboard in Resources */,
+				72FA49731D4BD3AA0056BED0 /* swimming@ocean-beach.gpx in Resources */,
 				72FA496F1D4BD1270056BED0 /* little-griddle.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
