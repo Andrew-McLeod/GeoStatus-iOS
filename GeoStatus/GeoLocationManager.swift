@@ -27,19 +27,28 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         if status == .AuthorizedAlways {
             // Register geofences, beacons, etc
 
-            // TODO: Loop Realm?
-
-            if let uuid = NSUUID(UUIDString: "6665542b-41a1-5e00-931c-6a82db9b78c1") {
-                let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 123, minor: 456, identifier: "MyBeacon")
-                locationManager.startMonitoringForRegion(beaconRegion)
-                locationManager.startRangingBeaconsInRegion(beaconRegion)
+            let regions = GeoRegionStore.sharedInstance.getGeoRegions()
+            for region in regions {
+                if region.regionType == .Location {
+                    let region = region.createRegion() as! CLCircularRegion
+                    locationManager.startMonitoringForRegion(region)
+                } else {
+                    let region = region.createRegion() as! CLBeaconRegion
+                    locationManager.startMonitoringForRegion(region)
+                    locationManager.startRangingBeaconsInRegion(region)
+                }
             }
 
         }
 
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        locationManager.startUpdatingLocation()
+
     }
 
     func stopMonitoring() {
+
+        locationManager.stopUpdatingLocation()
 
     }
 
@@ -76,7 +85,10 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
     }
 
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+
         if (beacons.count == 0) { return }
+
+        print("Beacon(s) in range: name=\(region.identifier), count=\(beacons.count), uuid=\(region.proximityUUID.UUIDString)")
 
         let beacon = beacons[0]
         var proximityString = "Unknown"

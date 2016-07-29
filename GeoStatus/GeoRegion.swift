@@ -6,6 +6,7 @@
 //  Copyright © 2016 Mobile Data Labs. All rights reserved.
 //
 
+import CoreLocation
 import Foundation
 import RealmSwift
 
@@ -39,6 +40,18 @@ class GeoRegion: Object {
             case .Location:
                 self.type = "location"
             }
+        }
+    }
+
+    func createRegion() -> CLRegion {
+        if self.regionType == .Beacon {
+            let uuid = NSUUID(UUIDString: self.beaconUUID!)!
+            let beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: self.name)
+            return beaconRegion
+        } else {
+            let coordinate = CLLocationCoordinate2DMake(Double(self.locationLatitude.value!), Double(self.locationLongitude.value!))
+            let circularRegion = CLCircularRegion(center: coordinate, radius: Double(self.locationRadius.value!), identifier: self.name)
+            return circularRegion
         }
     }
 

@@ -14,6 +14,10 @@
 		68D475391D4A829E00D65851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D475371D4A829E00D65851 /* LaunchScreen.storyboard */; };
 		68D475411D4A83FC00D65851 /* GeoLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475401D4A83FC00D65851 /* GeoLocationManager.swift */; };
 		68D475441D4ACCF200D65851 /* GeoRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475431D4ACCF200D65851 /* GeoRegion.swift */; };
+		68D475461D4AD79A00D65851 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D475451D4AD79A00D65851 /* MapKit.framework */; };
+		68D475481D4AD83E00D65851 /* GeoRegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475471D4AD83E00D65851 /* GeoRegionListViewController.swift */; };
+		68D4754A1D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475491D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift */; };
+		68D4754E1D4B1C9900D65851 /* GeoRegionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */; };
 		B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +33,10 @@
 		68D4753A1D4A829E00D65851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D475401D4A83FC00D65851 /* GeoLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationManager.swift; sourceTree = "<group>"; };
 		68D475431D4ACCF200D65851 /* GeoRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegion.swift; sourceTree = "<group>"; };
+		68D475451D4AD79A00D65851 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		68D475471D4AD83E00D65851 /* GeoRegionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegionListViewController.swift; sourceTree = "<group>"; };
+		68D475491D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLocationGeoRegionViewController.swift; sourceTree = "<group>"; };
+		68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegionStore.swift; sourceTree = "<group>"; };
 		7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D475461D4AD79A00D65851 /* MapKit.framework in Frameworks */,
 				B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +56,7 @@
 		3E6BB12A49FF3C8EA4BB1E1C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68D475451D4AD79A00D65851 /* MapKit.framework */,
 				5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */,
 			);
 			name = Frameworks;
@@ -90,6 +100,9 @@
 				68D4753A1D4A829E00D65851 /* Info.plist */,
 				68D475401D4A83FC00D65851 /* GeoLocationManager.swift */,
 				68D475431D4ACCF200D65851 /* GeoRegion.swift */,
+				68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */,
+				68D475471D4AD83E00D65851 /* GeoRegionListViewController.swift */,
+				68D475491D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift */,
 			);
 			path = GeoStatus;
 			sourceTree = "<group>";
@@ -222,10 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68D475481D4AD83E00D65851 /* GeoRegionListViewController.swift in Sources */,
+				68D4754A1D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift in Sources */,
 				68D475311D4A829E00D65851 /* ViewController.swift in Sources */,
 				68D475441D4ACCF200D65851 /* GeoRegion.swift in Sources */,
 				68D475411D4A83FC00D65851 /* GeoLocationManager.swift in Sources */,
 				68D4752F1D4A829E00D65851 /* AppDelegate.swift in Sources */,
+				68D4754E1D4B1C9900D65851 /* GeoRegionStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
