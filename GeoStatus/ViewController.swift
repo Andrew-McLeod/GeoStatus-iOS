@@ -8,11 +8,22 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var locationPermissionBar: UIView!
     @IBOutlet weak var notificationPermissionBar: UIView!
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var borderView: UIView!
+
+    var currentGeoLocation: GeoRegion?
+    var currentGeoBeacon: GeoRegion?
+
+    var currentLocationName: String = "Unknown"
+    var currentBeaconName: String = "Unknown"
+
+    var userDragged: Bool = false
 
     lazy var locationManager: CLLocationManager = {
         let locMgr = CLLocationManager()
@@ -29,6 +40,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
         GeoLocationManager.sharedInstance.startMonitoring()
 
+        mapView.showsUserLocation = true
+        mapView.delegate = self
+
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.didDragMap))
+        panGesture.delegate = self
+        mapView.addGestureRecognizer(panGesture)
+
+    }
+
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        if !userDragged {
+            updateUserLocation(userLocation)
+        }
+    }
+
+    func updateUserLocation(userLocation: MKUserLocation) {
+        let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+        let adjustedRegion = mapView.regionThatFits(viewRegion)
+        mapView.setRegion(adjustedRegion, animated: true)
+        //mapView.setCenterCoordinate(userLocation.coordinate, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +67,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        mapView.layer.masksToBounds = true
+        mapView.layer.cornerRadius = mapView.frame.size.height / 2.0
+
+        borderView.layer.cornerRadius = borderView.frame.size.height / 2.0
+        borderView.layer.borderWidth = 1
+        borderView.layer.borderColor = UIColor.darkGrayColor().CGColor
+    }
+
+    func didDragMap(gestureRecognizer: UIGestureRecognizer) {
+        print("DRAGGED")
+        self.userDragged = true
+    }
+
+    @IBAction func resetUserDragged(sender: AnyObject) {
+        self.userDragged = false
+        updateUserLocation(mapView.userLocation)
+    }
 
     func updatePermissionUI() {
         notificationPermissionBar.hidden = notificationsEnabled()
