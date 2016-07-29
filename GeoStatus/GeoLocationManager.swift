@@ -6,6 +6,7 @@
 //  Copyright © 2016 Mobile Data Labs. All rights reserved.
 //
 
+import Alamofire
 import CoreLocation
 import Foundation
 import UIKit
@@ -64,6 +65,12 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
             sendLocalNotification(message)
         }
 
+        // Send notification to server
+        let geoRegion = GeoRegionStore.sharedInstance.getGeoRegionByName(region.identifier)
+        if (geoRegion != nil) {
+            sendNotificationToServer(geoRegion!, isArriving: true)
+        }
+
     }
 
     func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
@@ -76,6 +83,12 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         if let circleRegion = region as? CLCircularRegion {
             let message = String(format: "Location region EXITED: %@", circleRegion.identifier)
             sendLocalNotification(message)
+        }
+
+        // Send notification to server
+        let geoRegion = GeoRegionStore.sharedInstance.getGeoRegionByName(region.identifier)
+        if (geoRegion != nil) {
+            sendNotificationToServer(geoRegion!, isArriving: false)
         }
 
     }
@@ -118,6 +131,21 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         notification.alertBody = message
         notification.soundName = UILocalNotificationDefaultSoundName;
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+
+    func sendNotificationToServer(geoRegion: GeoRegion, isArriving: Bool) {
+        let parameters = [
+            "location": geoRegion.name,
+            "device_type": geoRegion.type,
+            "verb": isArriving ? "arrived" : "left",
+            "username": "joenewbry",
+            "message": geoRegion.message,
+            "url": ""
+        ]
+        let request = Alamofire.request(.POST, "https://geostatus-production.herokuapp.com/geostatus/", parameters: parameters, encoding: .JSON)
+        request.response { (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
+            print("Sent notification to server, responseCode=\(response?.statusCode)")
+        }
     }
 
     // Helpers 

@@ -13,6 +13,7 @@ import RealmSwift
 class GeoRegion: Object {
 
     dynamic var name: String = ""
+    dynamic var message: String = ""
     dynamic var type: String = "location"
     let locationLongitude = RealmOptional<Float>()
     let locationLatitude = RealmOptional<Float>()
