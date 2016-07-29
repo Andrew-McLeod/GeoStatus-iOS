@@ -112,7 +112,7 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         case .Far:
             proximityString = "Far"
         case .Immediate:
-            proximityString = "Immediate"
+            proximityString = ""
         default:
             proximityString = "Unknown"
         }
@@ -139,7 +139,7 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         let parameters = [
             "location": geoRegion.name,
             "device_type": geoRegion.type,
-            "verb": isArriving ? "arrived" : "left",
+            "verb": isArriving ? "arrived at" : "left",
             "username": "@joe",
             "message": geoRegion.message,
             "url": "No url provided"

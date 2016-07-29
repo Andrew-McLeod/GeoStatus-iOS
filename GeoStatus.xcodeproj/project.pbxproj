@@ -18,6 +18,10 @@
 		68D475481D4AD83E00D65851 /* GeoRegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475471D4AD83E00D65851 /* GeoRegionListViewController.swift */; };
 		68D4754A1D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475491D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift */; };
 		68D4754E1D4B1C9900D65851 /* GeoRegionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */; };
+		72FA496A1D4BCEF20056BED0 /* home.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA49681D4BCEF20056BED0 /* home.gpx */; };
+		72FA496B1D4BCEF20056BED0 /* work.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA49691D4BCEF20056BED0 /* work.gpx */; };
+		72FA496D1D4BD03C0056BED0 /* ocean-beach.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA496C1D4BD03C0056BED0 /* ocean-beach.gpx */; };
+		72FA496F1D4BD1270056BED0 /* little-griddle.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 72FA496E1D4BD1270056BED0 /* little-griddle.gpx */; };
 		B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +41,10 @@
 		68D475471D4AD83E00D65851 /* GeoRegionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegionListViewController.swift; sourceTree = "<group>"; };
 		68D475491D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditLocationGeoRegionViewController.swift; sourceTree = "<group>"; };
 		68D4754D1D4B1C9900D65851 /* GeoRegionStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegionStore.swift; sourceTree = "<group>"; };
+		72FA49681D4BCEF20056BED0 /* home.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = home.gpx; sourceTree = "<group>"; };
+		72FA49691D4BCEF20056BED0 /* work.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = work.gpx; sourceTree = "<group>"; };
+		72FA496C1D4BD03C0056BED0 /* ocean-beach.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ocean-beach.gpx"; sourceTree = "<group>"; };
+		72FA496E1D4BD1270056BED0 /* little-griddle.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "little-griddle.gpx"; sourceTree = "<group>"; };
 		7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,7 @@
 		68D4752D1D4A829E00D65851 /* GeoStatus */ = {
 			isa = PBXGroup;
 			children = (
+				72FA49671D4BCEF20056BED0 /* locations */,
 				68D4752E1D4A829E00D65851 /* AppDelegate.swift */,
 				68D475301D4A829E00D65851 /* ViewController.swift */,
 				68D475321D4A829E00D65851 /* Main.storyboard */,
@@ -105,6 +114,17 @@
 				68D475491D4AD8B200D65851 /* EditLocationGeoRegionViewController.swift */,
 			);
 			path = GeoStatus;
+			sourceTree = "<group>";
+		};
+		72FA49671D4BCEF20056BED0 /* locations */ = {
+			isa = PBXGroup;
+			children = (
+				72FA496E1D4BD1270056BED0 /* little-griddle.gpx */,
+				72FA496C1D4BD03C0056BED0 /* ocean-beach.gpx */,
+				72FA49681D4BCEF20056BED0 /* home.gpx */,
+				72FA49691D4BCEF20056BED0 /* work.gpx */,
+			);
+			path = locations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +195,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				68D475391D4A829E00D65851 /* LaunchScreen.storyboard in Resources */,
+				72FA496B1D4BCEF20056BED0 /* work.gpx in Resources */,
 				68D475361D4A829E00D65851 /* Assets.xcassets in Resources */,
+				72FA496A1D4BCEF20056BED0 /* home.gpx in Resources */,
+				72FA496D1D4BD03C0056BED0 /* ocean-beach.gpx in Resources */,
 				68D475341D4A829E00D65851 /* Main.storyboard in Resources */,
+				72FA496F1D4BD1270056BED0 /* little-griddle.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,28 +35,28 @@ class GeoRegionStore {
         let home = GeoRegion()
         home.regionType = .Location
         home.locationRadius.value = 200
-        home.locationLatitude.value = 37.7799582
+        home.locationLatitude.value = 37.7754116
         home.locationLongitude.value = -122.3952237
         home.name = "Home"
         
         let work = GeoRegion()
         work.regionType = .Location
         work.locationRadius.value = 300
-        work.locationLatitude.value = 37.7799582
-        work.locationLongitude.value = -122.3952237
-        work.name = "Home"
+        work.locationLatitude.value = 37.7741226
+        work.locationLongitude.value = -122.4173377
+        work.name = "Work"
         
         let snacks = GeoRegion()
         snacks.regionType = .Beacon
         snacks.beaconUUID = "6665542b-41a1-5e00-931c-6a82db9b78c1"
         snacks.name = "Snacks"
 
-        let bathroom = GeoRegion()
-        bathroom.regionType = .Beacon
+        let stage = GeoRegion()
+        stage.regionType = .Beacon
         // TODO: put back in for demo
-        bathroom.beaconUUID = "7b44b47b-52a1-5381-90c2-f09b6838c5d4"
+        stage.beaconUUID = "7b44b47b-52a1-5381-90c2-f09b6838c5d4"
 //        bathroom.beaconUUID = "6594f59b-33f9-56e6-8ebf-49ac7c9a0d97"
-        bathroom.name = "Bathroom"
+        stage.name = "the Microsoft Hackathon Stage"
         
         // The birds nest
 //        let birdsnest = GeoRegion()
@@ -65,7 +65,7 @@ class GeoRegionStore {
 //        bathroom.name = "Birds Nest"
 
 
-        return [home, work, snacks, bathroom]
+        return [home, work, snacks, stage]
 
     }
 
