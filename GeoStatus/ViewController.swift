@@ -17,6 +17,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var borderView: UIView!
 
+    @IBOutlet weak var gpsLocationLabel: UILabel!
+    @IBOutlet weak var beaconLocationLabel: UILabel!
+
     var currentGeoLocation: GeoRegion?
     var currentGeoBeacon: GeoRegion?
 
@@ -47,6 +50,29 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         panGesture.delegate = self
         mapView.addGestureRecognizer(panGesture)
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(geoEntered), name: "GEO-ENTER", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(geoExited), name: "GEO-EXIT", object: nil)
+
+    }
+
+    func geoEntered(notification: NSNotification) {
+        if let geoRegion = notification.userInfo?["geo"] as? GeoRegion {
+            if geoRegion.regionType == .Beacon {
+                beaconLocationLabel.text = geoRegion.name
+            } else {
+                gpsLocationLabel.text = geoRegion.name
+            }
+        }
+    }
+
+    func geoExited(notification: NSNotification) {
+        if let geoRegion = notification.userInfo?["geo"] as? GeoRegion {
+            if geoRegion.regionType == .Beacon {
+                beaconLocationLabel.text = "Unknown"
+            } else {
+                gpsLocationLabel.text = "Unknown"
+            }
+        }
     }
 
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {

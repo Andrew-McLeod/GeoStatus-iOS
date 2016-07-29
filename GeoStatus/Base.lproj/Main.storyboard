@@ -8,10 +8,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Where's Joe?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GeoStatus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Where's Joe?" id="BYZ-38-t0r" customClass="ViewController" customModule="GeoStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -76,8 +76,8 @@
                                     <constraint firstAttribute="trailing" secondItem="vvK-W5-s9T" secondAttribute="trailing" constant="8" id="zjx-a6-j3a"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EZ-KD-eKK">
-                                <rect key="frame" x="144" y="414" width="88" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4EZ-KD-eKK">
+                                <rect key="frame" x="143" y="569" width="88" height="30"/>
                                 <state key="normal" title="Location List"/>
                                 <connections>
                                     <segue destination="J6C-sH-HEn" kind="show" id="tN6-S9-Hwl"/>
@@ -104,13 +104,40 @@
                                     <action selector="resetUserDragged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOw-oc-6CH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRU-7l-jW0">
+                                <rect key="frame" x="137" y="409" width="102" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current GPS Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX9-LH-14g">
+                                <rect key="frame" x="126" y="442" width="123" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Bluetooth Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oM7-va-jFF">
+                                <rect key="frame" x="111" y="507" width="153" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-Mt-CsV">
+                                <rect key="frame" x="137" y="474" width="102" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3jh-7l-hO1" firstAttribute="height" secondItem="Q8l-RR-iHA" secondAttribute="height" constant="1" id="2G0-lT-Z9f"/>
+                            <constraint firstItem="oM7-va-jFF" firstAttribute="top" secondItem="W8O-Mt-CsV" secondAttribute="bottom" constant="4" id="2dE-jt-ksa"/>
+                            <constraint firstItem="GRU-7l-jW0" firstAttribute="centerX" secondItem="3jh-7l-hO1" secondAttribute="centerX" id="38I-KR-ZUl"/>
                             <constraint firstItem="3jh-7l-hO1" firstAttribute="leading" secondItem="Vr5-mx-46J" secondAttribute="trailing" constant="8" symbolic="YES" id="3tN-0S-siW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rZm-6I-cz1" secondAttribute="bottom" id="5Js-wU-d3S"/>
                             <constraint firstItem="rZm-6I-cz1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="63J-JD-m4C"/>
+                            <constraint firstItem="GRU-7l-jW0" firstAttribute="top" secondItem="3jh-7l-hO1" secondAttribute="bottom" constant="16" id="6Nl-1p-D1B"/>
                             <constraint firstItem="Vr5-mx-46J" firstAttribute="top" secondItem="3jh-7l-hO1" secondAttribute="bottom" constant="-74" id="9dh-X5-d4u"/>
                             <constraint firstItem="Q8l-RR-iHA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="BR7-aA-WLc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xWY-wh-gXV" secondAttribute="bottom" id="CcY-oR-GSX"/>
@@ -119,15 +146,24 @@
                             <constraint firstItem="4EZ-KD-eKK" firstAttribute="top" secondItem="Q8l-RR-iHA" secondAttribute="bottom" constant="22" id="MhB-cA-3FC"/>
                             <constraint firstItem="Vr5-mx-46J" firstAttribute="trailing" secondItem="3jh-7l-hO1" secondAttribute="trailing" constant="-8" id="XJd-3Q-TG1"/>
                             <constraint firstAttribute="trailing" secondItem="xWY-wh-gXV" secondAttribute="trailing" id="Xq1-eQ-HvW"/>
+                            <constraint firstItem="W8O-Mt-CsV" firstAttribute="top" secondItem="eX9-LH-14g" secondAttribute="bottom" constant="17" id="ZGS-j6-q6O"/>
+                            <constraint firstItem="eX9-LH-14g" firstAttribute="top" secondItem="GRU-7l-jW0" secondAttribute="bottom" constant="4" id="ZpF-FX-Ykk"/>
+                            <constraint firstItem="eX9-LH-14g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="atS-I0-aZ3"/>
                             <constraint firstItem="3jh-7l-hO1" firstAttribute="width" secondItem="Q8l-RR-iHA" secondAttribute="width" constant="1" id="bBE-Kn-gY5"/>
                             <constraint firstItem="4EZ-KD-eKK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6U-oQ-6bK"/>
                             <constraint firstItem="Q8l-RR-iHA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="cXX-xH-fxU"/>
+                            <constraint firstItem="eX9-LH-14g" firstAttribute="centerX" secondItem="3jh-7l-hO1" secondAttribute="centerX" id="cvS-GH-j6m"/>
                             <constraint firstItem="Vr5-mx-46J" firstAttribute="bottom" secondItem="3jh-7l-hO1" secondAttribute="bottom" constant="-8" id="dbu-4O-C2k"/>
+                            <constraint firstItem="oM7-va-jFF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eCG-og-hnd"/>
                             <constraint firstItem="Q8l-RR-iHA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="eSy-fy-Kbv"/>
                             <constraint firstItem="4EZ-KD-eKK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gbw-7I-0zp"/>
                             <constraint firstAttribute="trailing" secondItem="rZm-6I-cz1" secondAttribute="trailing" id="kBH-Mh-FGc"/>
                             <constraint firstItem="3jh-7l-hO1" firstAttribute="centerY" secondItem="Q8l-RR-iHA" secondAttribute="centerY" id="krE-Ga-Nnv"/>
                             <constraint firstItem="Q8l-RR-iHA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mqj-rr-QSB"/>
+                            <constraint firstItem="W8O-Mt-CsV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nHm-Wr-MNc"/>
+                            <constraint firstItem="oM7-va-jFF" firstAttribute="top" secondItem="W8O-Mt-CsV" secondAttribute="bottom" constant="4" id="oc0-v9-l9V"/>
+                            <constraint firstItem="GRU-7l-jW0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ucV-I0-P3N"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4EZ-KD-eKK" secondAttribute="bottom" constant="68" id="wSx-G7-arG"/>
                             <constraint firstItem="3jh-7l-hO1" firstAttribute="centerX" secondItem="Q8l-RR-iHA" secondAttribute="centerX" id="zGv-0e-AZa"/>
                         </constraints>
                         <variation key="default">
@@ -135,15 +171,20 @@
                                 <exclude reference="3tN-0S-siW"/>
                                 <exclude reference="KuH-uE-3kz"/>
                                 <exclude reference="cXX-xH-fxU"/>
-                                <exclude reference="gbw-7I-0zp"/>
+                                <exclude reference="38I-KR-ZUl"/>
+                                <exclude reference="cvS-GH-j6m"/>
                                 <exclude reference="9dh-X5-d4u"/>
+                                <exclude reference="MhB-cA-3FC"/>
+                                <exclude reference="gbw-7I-0zp"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="7oJ-sJ-paB"/>
+                    <navigationItem key="navigationItem" title="Where's Joe?" id="7oJ-sJ-paB"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="beaconLocationLabel" destination="W8O-Mt-CsV" id="yAS-4O-OZ3"/>
                         <outlet property="borderView" destination="3jh-7l-hO1" id="4ON-at-MCL"/>
+                        <outlet property="gpsLocationLabel" destination="GRU-7l-jW0" id="qS5-o5-C6F"/>
                         <outlet property="locationPermissionBar" destination="xWY-wh-gXV" id="dg6-ry-6Y3"/>
                         <outlet property="mapView" destination="Q8l-RR-iHA" id="SXC-P9-q2q"/>
                         <outlet property="notificationPermissionBar" destination="rZm-6I-cz1" id="SZq-mF-gMW"/>

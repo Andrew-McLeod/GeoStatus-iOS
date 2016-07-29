@@ -69,6 +69,12 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         let geoRegion = GeoRegionStore.sharedInstance.getGeoRegionByName(region.identifier)
         if (geoRegion != nil) {
             sendNotificationToServer(geoRegion!, isArriving: true)
+
+            //NSNotificationCenter.defaultCenter().postNotificationName("GEO-ENTER", object: geoRegion)
+            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(2 * Double(NSEC_PER_SEC)))
+            dispatch_after(delayTime, dispatch_get_main_queue()) {
+                NSNotificationCenter.defaultCenter().postNotificationName("GEO-ENTER", object: nil, userInfo: ["geo": geoRegion!])
+            }
         }
 
     }
@@ -90,6 +96,9 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         print("Region ID: \(region.identifier)")
         if (geoRegion != nil) {
             sendNotificationToServer(geoRegion!, isArriving: false)
+
+            //NSNotificationCenter.defaultCenter().postNotificationName("GEO-EXIT", object: geoRegion)
+            NSNotificationCenter.defaultCenter().postNotificationName("GEO-EXIT", object: nil, userInfo: ["geo": geoRegion!])
         }
 
     }
@@ -115,6 +124,11 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
             proximityString = ""
         default:
             proximityString = "Unknown"
+        }
+
+        let geoRegion = GeoRegionStore.sharedInstance.getGeoRegionByName(region.identifier)
+        if (geoRegion != nil) {
+            NSNotificationCenter.defaultCenter().postNotificationName("GEO-ENTER", object: nil, userInfo: ["geo": geoRegion!])
         }
 
         let message = String(format: "Beacon RANGED: %f, %f", proximityString, beacon.accuracy)
