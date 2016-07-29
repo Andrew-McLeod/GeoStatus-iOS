@@ -135,13 +135,14 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
     }
 
     func sendNotificationToServer(geoRegion: GeoRegion, isArriving: Bool) {
+        
         let parameters = [
             "location": geoRegion.name,
             "device_type": geoRegion.type,
             "verb": isArriving ? "arrived" : "left",
             "username": "@joe",
             "message": geoRegion.message,
-            "url": ""
+            "url": "No url provided"
         ]
         print("Request: \(parameters)")
         let request = Alamofire.request(.POST, "https://geostatus-production.herokuapp.com/geostatus/", parameters: parameters, encoding: .JSON)
