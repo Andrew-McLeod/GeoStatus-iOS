@@ -13,6 +13,7 @@
 		68D475361D4A829E00D65851 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D475351D4A829E00D65851 /* Assets.xcassets */; };
 		68D475391D4A829E00D65851 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D475371D4A829E00D65851 /* LaunchScreen.storyboard */; };
 		68D475411D4A83FC00D65851 /* GeoLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475401D4A83FC00D65851 /* GeoLocationManager.swift */; };
+		68D475441D4ACCF200D65851 /* GeoRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D475431D4ACCF200D65851 /* GeoRegion.swift */; };
 		B98084D28D29A3D77B51DE3F /* Pods_GeoStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5896F6D786A22AB489202095 /* Pods_GeoStatus.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		68D475381D4A829E00D65851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68D4753A1D4A829E00D65851 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68D475401D4A83FC00D65851 /* GeoLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocationManager.swift; sourceTree = "<group>"; };
+		68D475431D4ACCF200D65851 /* GeoRegion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoRegion.swift; sourceTree = "<group>"; };
 		7FFB691D0AAC2C5CEFDE2B43 /* Pods-GeoStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStatus/Pods-GeoStatus.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				68D475371D4A829E00D65851 /* LaunchScreen.storyboard */,
 				68D4753A1D4A829E00D65851 /* Info.plist */,
 				68D475401D4A83FC00D65851 /* GeoLocationManager.swift */,
+				68D475431D4ACCF200D65851 /* GeoRegion.swift */,
 			);
 			path = GeoStatus;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68D475311D4A829E00D65851 /* ViewController.swift in Sources */,
+				68D475441D4ACCF200D65851 /* GeoRegion.swift in Sources */,
 				68D475411D4A83FC00D65851 /* GeoLocationManager.swift in Sources */,
 				68D4752F1D4A829E00D65851 /* AppDelegate.swift in Sources */,
 			);

@@ -27,6 +27,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
         updatePermissionUI()
 
+        GeoLocationManager.sharedInstance.startMonitoring()
+
     }
 
     override func didReceiveMemoryWarning() {

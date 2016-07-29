@@ -26,6 +26,15 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
         let status = CLLocationManager.authorizationStatus()
         if status == .AuthorizedAlways {
             // Register geofences, beacons, etc
+
+            // TODO: Loop Realm?
+
+            if let uuid = NSUUID(UUIDString: "6665542b-41a1-5e00-931c-6a82db9b78c1") {
+                let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 123, minor: 456, identifier: "MyBeacon")
+                locationManager.startMonitoringForRegion(beaconRegion)
+                locationManager.startRangingBeaconsInRegion(beaconRegion)
+            }
+
         }
 
     }
@@ -64,6 +73,27 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didVisit visit: CLVisit) {
 
+    }
+
+    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+        if (beacons.count == 0) { return }
+
+        let beacon = beacons[0]
+        var proximityString = "Unknown"
+        switch beacon.proximity {
+        case .Near:
+            proximityString = "Near"
+        case .Far:
+            proximityString = "Far"
+        case .Immediate:
+            proximityString = "Immediate"
+        default:
+            proximityString = "Unknown"
+        }
+
+        let message = String(format: "Beacon RANGED: %f, %f", proximityString, beacon.accuracy)
+        print("BEACON RANGED!  proximity: %f, accuracy: %@", proximityString, beacon.accuracy)
+        sendLocalNotification(message)
     }
 
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
