@@ -47,8 +47,7 @@ class GeoRegion: Object {
     func createRegion() -> CLRegion {
         if self.regionType == .Beacon {
             let uuid = NSUUID(UUIDString: self.beaconUUID!)!
-            let beaconRegion = CLBeaconRegion(proximityUUID: uuid, major: 0, minor: 0, identifier: self.name)
-            //let beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: self.name)
+            let beaconRegion = CLBeaconRegion(proximityUUID: uuid, identifier: self.name)
             return beaconRegion
         } else {
             let coordinate = CLLocationCoordinate2DMake(Double(self.locationLatitude.value!), Double(self.locationLongitude.value!))

@@ -87,6 +87,7 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
 
         // Send notification to server
         let geoRegion = GeoRegionStore.sharedInstance.getGeoRegionByName(region.identifier)
+        print("Region ID: \(region.identifier)")
         if (geoRegion != nil) {
             sendNotificationToServer(geoRegion!, isArriving: false)
         }
@@ -125,18 +126,6 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
 
     }
 
-    func locationManager(manager: CLLocationManager, monitoringDidFailForRegion region: CLRegion?, withError error: NSError) {
-        print("Failed monitoring region: \(error.description)")
-    }
-
-    func locationManager(manager: CLLocationManager, rangingBeaconsDidFailForRegion region: CLBeaconRegion, withError error: NSError) {
-        print("Beacon ranging failed: \(error.description)")
-    }
-
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("Location manager failed: \(error.description)")
-    }
-
     func sendLocalNotification(message: String) {
         let notification = UILocalNotification()
         notification.fireDate = NSDate().dateByAddingTimeInterval(0.3)
@@ -150,10 +139,11 @@ class GeoLocationManager: NSObject, CLLocationManagerDelegate {
             "location": geoRegion.name,
             "device_type": geoRegion.type,
             "verb": isArriving ? "arrived" : "left",
-            "username": "joe",
-            "message": (geoRegion.message.isEmpty) ? "." : geoRegion.message,
-            "url": "http://joenewbry.com"
+            "username": "@joe",
+            "message": geoRegion.message,
+            "url": ""
         ]
+        print("Request: \(parameters)")
         let request = Alamofire.request(.POST, "https://geostatus-production.herokuapp.com/geostatus/", parameters: parameters, encoding: .JSON)
         request.response { (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, error: NSError?) in
             print("Sent notification to server, responseCode=\(response?.statusCode)")
